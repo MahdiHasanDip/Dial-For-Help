@@ -20,16 +20,12 @@ const Contact = () => {
         console.log(error.text);
         });
         
-        e.target.reset();
-       
+        e.target.reset();      
         
-        }
-
-
-
-        const style = {color:"red"}
+    }
+    const style = {color:"red"}
     return (
-        <div id="Contact" className="Contact-me ">
+        <div id="Contact" >
             <div className="">
                 <img className="img-fluid" src="https://i.ibb.co/6JpNPx9/Contact-Us.png" alt="" />
             </div>
