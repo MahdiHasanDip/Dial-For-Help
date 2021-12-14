@@ -1,0 +1,15 @@
+.first {
+  height: 250px;
+  margin: 25px;
+  border-radius: 10px;
+
+  background-color: #287a57;
+  color: aliceblue;
+}
+
+.first img {
+  width: 40%;
+}
+.title img {
+  width: 250px;
+}
