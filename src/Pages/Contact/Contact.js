@@ -1,7 +1,6 @@
 import React from 'react';
 import "./Contact.css"
 import emailjs from "emailjs-com";
-import { Link} from 'react-router-dom';
 // import Swal from 'sweetalert2';
 
 const Contact = () => {
@@ -23,7 +22,6 @@ const Contact = () => {
         e.target.reset();      
         
     }
-    const style = {color:"red"}
     return (
         <div id="Contact" >
             <div className="">
