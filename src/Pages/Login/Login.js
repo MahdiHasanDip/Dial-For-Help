@@ -4,18 +4,20 @@ import UseFirebase from '../Hooks/UseFirebase/UseFirebase';
 import "./Login.css"
 import { Link } from 'react-router-dom';
 const Login = () => {
-    const {signInWithGoogle,user,logOut}= UseFirebase();
+    const {signInWithGoogle,user,logOut,login}= UseFirebase();
     const [email,setEmail] = useState("")
     const [password,setPassword] = useState("")
 
     const handleLogin = (e)=>{
-        
+        login(email,password);
+        e.preventDefault();
     }
     const handleEmail = (e)=>{
         setEmail(e.target.value);
     }
     const handlePassword = (e)=>{
         setPassword(e.target.value);
+        
     }
 
     
