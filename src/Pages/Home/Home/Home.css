@@ -2,8 +2,9 @@
   height: 250px;
   margin: 25px;
   border-radius: 10px;
-
-  background-color: #226d4c;
+  box-shadow: rgba(0, 0, 0, 0.25) 0px 50px 50px -12px;
+  background-color: #3bb78f;
+  background-image: linear-gradient(315deg, #3bb78f 0%, #0bab64 74%);
   color: aliceblue;
 }
 .first img {

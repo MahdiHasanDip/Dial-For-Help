@@ -3,6 +3,7 @@ import "./Login.css"
 import UseFirebase from '../Hooks/UseFirebase/UseFirebase';
 import "./Login.css"
 import { Link } from 'react-router-dom';
+import { Col, Container, Row } from 'react-bootstrap';
 const Login = () => {
     const {signInWithGoogle,user,logOut,login}= UseFirebase();
     const [email,setEmail] = useState("")
@@ -22,20 +23,41 @@ const Login = () => {
 
     
     return (
-        <div className="Login">
-            <h1 className='mt-5'>{user?.email}</h1>
-            <form onClick={handleLogin}>
-                <input onBlur={handleEmail} type="email" />
-                <input onBlur={handlePassword} type="password" />
-                <input type="submit" value="Submit" />
-            </form>
-            <button onClick={signInWithGoogle}>
-                Login
-            </button>
-            <button onClick={logOut}>
-                Logout
-            </button>
-            <Link to="/registration" >Reg</Link>
+        <div className="Login"> 
+            <div className="container login-form">
+                <Container fluid>
+                    <Row>
+                        <Col xs={12} lg={6}>
+                            <div className="">
+                                <h1 className='mt-5'>{user?.email}</h1>
+                                    <form className='Form' onClick={handleLogin}>
+                                        <input onBlur={handleEmail} type="email"  placeholder='Email'  />
+                                        <br />
+                                        <input onBlur={handlePassword} type="password" placeholder='Password' />
+                                        <br />
+                                        <input id="submit" type="submit" value="Submit" />
+                                    </form>
+
+                                    <br />
+                                    
+                                <button className='google-login' onClick={signInWithGoogle}>
+                                    Login with Goolgle
+                                </button>
+
+                                
+                            </div>
+                        </Col>
+
+                        <Col xs={12} lg={6} className="Reg-section">
+                            <div >
+                                <h1>Welcome to login</h1>
+                                <h4>Do you need an account?</h4>
+                                <Link to="/registration" ><button className='link-btn'>Sign Up</button></Link>
+                            </div>
+                        </Col>
+                    </Row>
+                 </Container>
+            </div>                              
         </div>
     );
 };
