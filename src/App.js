@@ -35,8 +35,12 @@ function App() {
         <Route path="/contact" element={<PrivateRoute>
           <Contact/>
         </PrivateRoute>}></Route>
-        <Route path="/about" element={<About/>}></Route>
-        <Route path="/services" element={<Services/>}></Route>
+        <Route path="/about" element={<PrivateRoute>
+          <About/>
+        </PrivateRoute>}></Route>
+        <Route path="/services" element={<PrivateRoute>
+          <Services/>
+        </PrivateRoute>}></Route>
         <Route path="/driver" element={<Driver/>}></Route>
         <Route path="/electrician" element={<Electrician/>}></Route>
         <Route path="/plumber" element={<Plumber/>}></Route>
