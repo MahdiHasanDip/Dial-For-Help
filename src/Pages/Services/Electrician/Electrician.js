@@ -11,16 +11,19 @@ const Electrician = () => {
         
     }, [])   
 
-    useEffect(()=>{
+ useEffect(()=>{
         const matched = services.filter(service => service.skill == "Electrician");
         setElectricians(matched);
-    },[services])
+    },[services])   
     
      
     return (
         <div className='driver'>
            <div className="driver-title">
-           <h1 className="pt-3">Available Electricians Nearby</h1>
+               <div >
+                   <img className="img-fluid" src="https://i.ibb.co/ssCYMZp/Dial-For-help-3.png" alt="" />
+               </div>
+           <h1 className="pt-3">YOU CAN FIND ELECTRICIANS HERE</h1>
            {/* <p>You can find drivers here</p> */}
            </div>
                 <div className="container driver-section">

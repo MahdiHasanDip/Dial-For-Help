@@ -17,38 +17,47 @@ import Registration from './Pages/Registration/Registration';
 import Driver from './Pages/Services/Driver/Driver';
 import Electrician from './Pages/Services/Electrician/Electrician';
 import Plumber from './Pages/Services/Plumber/Plumber';
+import Services from './Pages/Services/Services/Services';
+import AuthProvider from './Pages/Context/AuthProvider';
+import PrivateRoute from './PrivetRoute/PrivetRoute';
+import AdminRoute from './Pages/AdminRoute/AdminRoute';
 
 
 
 function App() {
   return (
     <div className="App">
-      <BrowserRouter>
-      <Header/>
-    <Routes>
-      <Route path="/" element={<Home/>}></Route>
-      <Route path="/contact" element={<Contact/>}></Route>
-      <Route path="/about" element={<About/>}></Route>
-      <Route path="/driver" element={<Driver/>}></Route>
-      <Route path="/electrician" element={<Electrician/>}></Route>
-      <Route path="/plumber" element={<Plumber/>}></Route>
-      <Route path="/login" element={<Login/>}></Route>
-      <Route path="/registration" element={<Registration/>}></Route>
-      <Route path="/dashboard" element={<Dashboard/>}>
-        
-          <Route path="/dashboard" element={<DashBoardHome />}/>
-          <Route path="/dashboard/Admin" element={<Admin />} />
-          <Route path="/dashboard/addService" element={<AddService/>} />
-          <Route path="/dashboard/delete" element={<DeleteService/>} />      
-
-
-
+<AuthProvider>
+  <BrowserRouter>
+        <Header/>
+      <Routes>
+        <Route path="/" element={<Home/>}></Route>
+        <Route path="/contact" element={<PrivateRoute>
+          <Contact/>
+        </PrivateRoute>}></Route>
+        <Route path="/about" element={<About/>}></Route>
+        <Route path="/services" element={<Services/>}></Route>
+        <Route path="/driver" element={<Driver/>}></Route>
+        <Route path="/electrician" element={<Electrician/>}></Route>
+        <Route path="/plumber" element={<Plumber/>}></Route>
+        <Route path="/login" element={<Login/>}></Route>
+        <Route path="/registration" element={<Registration/>}></Route>
+        <Route path="/dashboard" element={<AdminRoute>
+          <Dashboard/>
+        </AdminRoute>}>
+          
+            <Route path="/dashboard" element={<DashBoardHome />}/>
+            <Route path="/dashboard/Admin" element={<Admin />} />
+            <Route path="/dashboard/addService" element={<AddService/>} />
+            <Route path="/dashboard/delete" element={<DeleteService/>} />   
       </Route>
-      
-      <Route path="*" element={<NotFound/>}></Route>
-    </Routes>
-    <Footer/>
-  </BrowserRouter>
+
+        
+        <Route path="*" element={<NotFound/>}></Route>
+      </Routes>
+      <Footer/>
+    </BrowserRouter>
+</AuthProvider>
     </div>
   );
 }

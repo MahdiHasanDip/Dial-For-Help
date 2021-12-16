@@ -5,28 +5,32 @@ import "./Driver.css"
 const Driver = () => {
     const [services, setServices]= useState([]);
     const [drivers, setDrivers]= useState([]);
+
+    // Load data 
     useEffect(() => {
         fetch('http://localhost:5000/service')
         .then(res => res.json())
         .then(data => setServices(data))
         
     }, [])
-    console.log(services);
+    
 
     useEffect(()=>{
         const matched = services.filter(service => service.skill == "Driver");
         setDrivers(matched);
     },[services])
     
-     console.log(drivers);
+    
 
     return (
         <div className='driver'>
            <div className="driver-title">
-           <h1 className="pt-3">Available Drivers Nearby</h1>
-           {/* <p>You can find drivers here</p> */}
+                <img className="img-fluid" src="https://i.ibb.co/cYyCMvJ/Dial-For-help-5.png" alt="" />
+                <h1>YOU CAN FIND DRIVERS HERE</h1>
+                <hr />
            </div>
-                <div className="container driver-section">
+           
+            <div className="container driver-section">
                 <Container>  
                     <Row>
                         {

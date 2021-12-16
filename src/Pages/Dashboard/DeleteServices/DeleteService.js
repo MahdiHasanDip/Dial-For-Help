@@ -32,12 +32,16 @@ const DeleteService = () => {
                         'Your file has been deleted.',
                         'success'
                       )
+                      const remaining = services.filter(order => order._id !== id)
+                      setServices(remaining)
                 }
             })
             }
           });
      
          }
+
+
 
 
     return (

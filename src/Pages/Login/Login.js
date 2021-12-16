@@ -2,24 +2,29 @@ import React, { useState } from 'react';
 import "./Login.css"
 import UseFirebase from '../Hooks/UseFirebase/UseFirebase';
 import "./Login.css"
-import { Link } from 'react-router-dom';
+import { Link, useLocation, useNavigate } from 'react-router-dom';
 import { Col, Container, Row } from 'react-bootstrap';
 const Login = () => {
     const {signInWithGoogle,user,logOut,login}= UseFirebase();
     const [email,setEmail] = useState("")
     const [password,setPassword] = useState("")
+    const location = useLocation();
+    const navigate = useNavigate();
 
     const handleLogin = (e)=>{
-        login(email,password);
+        login(email,password,location,navigate );
         e.preventDefault();
-    }
+    };
     const handleEmail = (e)=>{
         setEmail(e.target.value);
-    }
+    };
     const handlePassword = (e)=>{
         setPassword(e.target.value);
         
-    }
+    };
+    const handleGoogleLogin = () =>{        
+        signInWithGoogle(location,navigate)
+    };
 
     
     return (
@@ -28,8 +33,9 @@ const Login = () => {
                 <Container fluid>
                     <Row>
                         <Col xs={12} lg={6}>
-                            <div className="">
-                                <h1 className='mt-5'>{user?.email}</h1>
+                            <div className=""> 
+                            <h3>Login Here</h3>    
+                            <hr />                          
                                     <form className='Form' onClick={handleLogin}>
                                         <input onBlur={handleEmail} type="email"  placeholder='Email'  />
                                         <br />
@@ -37,14 +43,13 @@ const Login = () => {
                                         <br />
                                         <input id="submit" type="submit" value="Submit" />
                                     </form>
-
-                                    <br />
-                                    
-                                <button className='google-login' onClick={signInWithGoogle}>
-                                    Login with Goolgle
+                                    <br />                                    
+                                <button className='google-login' onClick={handleGoogleLogin}>
+                                    Login with Google
                                 </button>
-                                <button onClick={logOut}link>Log</button>
-                                <p>{user.email}</p>
+                                <br /><br /><br />
+                                
+                              
                                 
                             </div>
                         </Col>
@@ -57,7 +62,7 @@ const Login = () => {
                             </div>
                         </Col>
                     </Row>
-                 </Container>
+                </Container>
             </div>                              
         </div>
     );

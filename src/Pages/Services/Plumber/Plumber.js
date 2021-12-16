@@ -22,7 +22,10 @@ const Plumber = () => {
     return (
         <div className='plumber'>
         <div className="plumber-title">
-        <h1 className="pt-3">Available plumbers Nearby</h1>
+            <div >
+                <img className="img-fluid" src="https://i.ibb.co/rpcQq6h/Dial-For-help-4.png" alt="" />
+            </div>
+        <h1 className="pt-3">YOU CAN FIND PLUMBERS HERE</h1>
         {/* <p>You can find plumbers here</p> */}
         </div>
              <div className="container plumber-section">

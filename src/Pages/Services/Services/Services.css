@@ -1,0 +1,25 @@
+.services {
+  margin-top: 65px;
+}
+.services-header {
+}
+.services-title {
+  color: antiquewhite;
+  font-family: "Courier New", Courier, monospace;
+  font-size: 15vh;
+}
+
+.img {
+  width: 50%;
+  border-radius: 15px;
+}
+.img img {
+  border-radius: 15px;
+}
+.find-btn {
+  padding: 5px 15px;
+  margin-bottom: 35px;
+  background-color: #1ed38b;
+  border: 1px solid #2ee59d;
+  color: aliceblue;
+}

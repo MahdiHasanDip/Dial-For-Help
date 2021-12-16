@@ -17,20 +17,24 @@ const auth = getAuth();
 
 
 // google sign in 
-const signInWithGoogle = ()=>{ 
+const signInWithGoogle = (location,navigate)=>{ 
+  setIsLoading(false)
         signInWithPopup(auth, GoogleProvider)
         .then((result) => {
         const credential = GoogleAuthProvider.credentialFromResult(result);
         const token = credential.accessToken;    
         const user = result.user;  
         saveUser(user.email, user.displayName, "PUT")
+        const destination = location?.state?.from || '/';
+        navigate(destination);
 
 
 
         }).catch((error) => {    
         const errorCode = error.code;
         const errorMessage = error.message; 
-        });
+        })
+        .finally(() => setIsLoading(true));
 }
 
 // Auth Observer
@@ -44,48 +48,56 @@ useEffect(() => {
       else{
         setUser({});
       }
-    //   setIsLoading(false);
+      setIsLoading(false);
     });
   
   },[])
 
 //   logout 
 const logOut =() =>{
+  setIsLoading(true);
     const auth = getAuth();
     signOut(auth).then(() => {
       // Sign-out successful.
     }).catch((error) => {
       // An error happened.
-    });
+    })
+    .finally(() => setIsLoading(false));
 }
 
 // registration 
-const registration = (email, password) =>{
+const registration = (email, password,navigate) =>{
+  setIsLoading(false)
     createUserWithEmailAndPassword(auth, email, password)
   .then((userCredential) => {    
     const user = userCredential.user;
     saveUser(user.email, user.displayName, "POST")
-    
+    navigate('/');
   })
+  
   .catch((error) => {
     const errorCode = error.code;
     const errorMessage = error.message;   
-  });
+  })
+  .finally(() => setIsLoading(true));
 }
 
 // Log in 
 
-const login = (email, password) =>{
+const login = (email, password,location,navigate) =>{
+  setIsLoading(false)
   signInWithEmailAndPassword(auth, email, password)
   .then((userCredential) => {
-    // Signed in 
+    const destination = location?.state?.from || '/';
+    navigate(destination);
     const user = userCredential.user;
     // ...
   })
   .catch((error) => {
     const errorCode = error.code;
     const errorMessage = error.message;
-  });
+  })
+  .finally(() => setIsLoading(true));
 }
 
 // user post to db 
@@ -116,7 +128,8 @@ useEffect(()=>{
             logOut,
             registration,
             login,
-            admin
+            admin,
+            isLoading
         }
     );
 };

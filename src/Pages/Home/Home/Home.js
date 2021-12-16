@@ -10,14 +10,7 @@ const Home = () => {
             <Banner/>
               <div className="container">
                   <br /><br /><br /><br />                
-                  <Card>
-                    <Card.Body>
-                      <Card.Title> Lorem ipsum dolor sit amet consectetur </Card.Title>
-                        <Card.Text>
-                            adipisicing elit. Officiis nisi deleniti itaque reiciendis dolorum laborum corporis culpa nam voluptates vero veniam, excepturi dolorem temporibus architecto praesentium. Iusto obcaecati incidunt dolores?
-                        </Card.Text>                    
-                      </Card.Body>
-                    </Card>
+                 
               </div>
             
             <Container>
