@@ -30,7 +30,12 @@ const AddService = () => {
                 <div className="input-box">
                 <input {...register("name", { required: true, maxLength: 20 })} placeholder="Name"/>
                 <br />
-                <input {...register("skill")} placeholder="Electrician, Driver, Plumber"/>
+                <select className='selector' {...register("skill")}>
+                        <option value="">Select skill...</option>
+                        <option value="Electrician">Electrician</option>
+                        <option value="Plumber">Plumber</option>
+                        <option value="Driver">Driver</option>
+                    </select>
                 <br />
                 <input {...register("location")} placeholder="location"/>
                 <br />
@@ -40,7 +45,7 @@ const AddService = () => {
                 <br />
                 </div>
                 <input className="btn btn-secondary mt-3 ps-5 pe-5" type="submit" />
-                </form> 
+                </form>                
             </div>            
          </div>
         </div>

@@ -43,7 +43,8 @@ const Login = () => {
                                 <button className='google-login' onClick={signInWithGoogle}>
                                     Login with Goolgle
                                 </button>
-
+                                <button onClick={logOut}link>Log</button>
+                                <p>{user.email}</p>
                                 
                             </div>
                         </Col>

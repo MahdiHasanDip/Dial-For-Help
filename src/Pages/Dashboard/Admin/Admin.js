@@ -37,6 +37,7 @@ const Admin = () => {
             <h1>Make An Admin Here</h1>
             <form onSubmit={handleSubmit} >
             <input className="input-field" onChange={handleEmail} type="Email" placeholder="Email" />
+            
             <input className="btn btn-outline-success submit-btn" type="submit" value="Submit" />
             </form>
             {

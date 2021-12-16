@@ -7,7 +7,9 @@ import { GoogleAuthProvider,getAuth,signInWithPopup,onAuthStateChanged,signOut,c
 initializeAuthentication();
 
 const UseFirebase = () => {
-    const [user, setUser]= useState({});
+  const [user, setUser] = useState({});
+  const [isLoading, setIsLoading] = useState(true);
+  const [admin,setAdmin] = useState(false);
 
 
 const GoogleProvider = new GoogleAuthProvider();
@@ -20,7 +22,9 @@ const signInWithGoogle = ()=>{
         .then((result) => {
         const credential = GoogleAuthProvider.credentialFromResult(result);
         const token = credential.accessToken;    
-        const user = result.user;   
+        const user = result.user;  
+        saveUser(user.email, user.displayName, "PUT")
+
 
 
         }).catch((error) => {    
@@ -59,7 +63,9 @@ const logOut =() =>{
 const registration = (email, password) =>{
     createUserWithEmailAndPassword(auth, email, password)
   .then((userCredential) => {    
-    const user = userCredential.user;    
+    const user = userCredential.user;
+    saveUser(user.email, user.displayName, "POST")
+    
   })
   .catch((error) => {
     const errorCode = error.code;
@@ -82,6 +88,25 @@ const login = (email, password) =>{
   });
 }
 
+// user post to db 
+const saveUser = (email,displayName , method)=>{
+  const user = {email, displayName};
+  fetch('http://localhost:5000/users',{
+              method: method,
+              headers:{
+                  'content-type': 'application/json'
+              },
+              body: JSON.stringify(user)              
+                           
+          })
+};
+
+// load admin 
+useEffect(()=>{
+  fetch(`http://localhost:5000/users/${user.email}`)
+  .then(res => res.json())
+  .then(data => setAdmin(data.admin))
+},[user.email])
 
 
     return (
@@ -90,7 +115,8 @@ const login = (email, password) =>{
             signInWithGoogle,
             logOut,
             registration,
-            login
+            login,
+            admin
         }
     );
 };
