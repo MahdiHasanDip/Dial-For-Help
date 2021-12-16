@@ -14,6 +14,9 @@ import AddService from './Pages/Dashboard/AddServices/AddService';
 import DeleteService from './Pages/Dashboard/DeleteServices/DeleteService';
 import Login from './Pages/Login/Login';
 import Registration from './Pages/Registration/Registration';
+import Driver from './Pages/Services/Driver/Driver';
+import Electrician from './Pages/Services/Electrician/Electrician';
+import Plumber from './Pages/Services/Plumber/Plumber';
 
 
 
@@ -26,6 +29,9 @@ function App() {
       <Route path="/" element={<Home/>}></Route>
       <Route path="/contact" element={<Contact/>}></Route>
       <Route path="/about" element={<About/>}></Route>
+      <Route path="/driver" element={<Driver/>}></Route>
+      <Route path="/electrician" element={<Electrician/>}></Route>
+      <Route path="/plumber" element={<Plumber/>}></Route>
       <Route path="/login" element={<Login/>}></Route>
       <Route path="/registration" element={<Registration/>}></Route>
       <Route path="/dashboard" element={<Dashboard/>}>

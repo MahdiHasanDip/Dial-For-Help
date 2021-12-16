@@ -1,4 +1,5 @@
 import React, { useEffect, useState } from 'react';
+import Swal from 'sweetalert2';
 
 const DeleteService = () => {
     const [services, setServices]=useState([]);
@@ -10,20 +11,31 @@ const DeleteService = () => {
     },[services.length])
 
     const handleDelete = (id) =>{
-
-        const confirmation = window.confirm('Are you sure,want to delete?');
-          if(confirmation){
-                         console.log(id);
-                         fetch(`http://localhost:5000/service/${id}`,{
-                             method:'DELETE'
-                         })
-                         .then(res => res.json())
-                         .then(data =>{
-                             if (data.deletedCount>0){
-                                 alert("Service Deleted")
-                             }
-                         })
-                     }
+        Swal.fire({
+            title: 'Are you sure?',
+            text: "You won't be able to revert this!",
+            icon: 'warning',
+            showCancelButton: true,
+            confirmButtonColor: '#3085d6',
+            cancelButtonColor: '#d33',
+            confirmButtonText: 'Yes, delete it!'
+          }).then((result) => {
+            if (result.isConfirmed) {              
+              fetch(`http://localhost:5000/service/${id}`,{
+                method:'DELETE'
+            })
+            .then(res => res.json())
+            .then(data =>{
+                if (data.deletedCount>0){
+                    Swal.fire(
+                        'Deleted!',
+                        'Your file has been deleted.',
+                        'success'
+                      )
+                }
+            })
+            }
+          });
      
          }
 

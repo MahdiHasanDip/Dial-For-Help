@@ -1,11 +1,21 @@
 import React from 'react';
 import { useForm } from 'react-hook-form';
+import Swal from 'sweetalert2';
 import "./AddServices.css"
 const AddService = () => {
     const { register, handleSubmit,reset } = useForm();
     const onSubmit = data => {
-        
-        fetch('http://localhost:5000/service',{
+        Swal.fire({
+            title: 'Do you want add this?',
+            showDenyButton: true,
+            showCancelButton: true,
+            confirmButtonText: 'Save',
+            denyButtonText: `Don't save`,
+          }).then((result) => {
+            /* Read more about isConfirmed, isDenied below */
+            if (result.isConfirmed) {
+              Swal.fire('Saved!', '', 'success')
+              fetch('http://localhost:5000/service',{
             method:'POST',
             headers:{
                 'content-type': 'application/json'
@@ -15,6 +25,10 @@ const AddService = () => {
         })
         .then(reset())
         .then(console.log(data));
+            } else if (result.isDenied) {
+              Swal.fire('Changes are not saved', '', 'info')
+            }
+          })
        
        
       }
@@ -37,6 +51,8 @@ const AddService = () => {
                         <option value="Driver">Driver</option>
                     </select>
                 <br />
+                <input {...register("Mobile")} placeholder="Phone Number"/>
+                <br />
                 <input {...register("location")} placeholder="location"/>
                 <br />
                 <input {...register("img")} placeholder="Image link" />
@@ -44,7 +60,7 @@ const AddService = () => {
                 <input type="number" {...register("price")} placeholder="Price"/>
                 <br />
                 </div>
-                <input className="btn btn-secondary mt-3 ps-5 pe-5" type="submit" />
+                <input className="submit-btn" type="submit" />
                 </form>                
             </div>            
          </div>
