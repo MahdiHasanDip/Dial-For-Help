@@ -10,6 +10,8 @@ const UseFirebase = () => {
   const [user, setUser] = useState({});
   const [isLoading, setIsLoading] = useState(true);
   const [admin,setAdmin] = useState(false);
+  const [error,setError] = useState("");
+  
 
 
 const GoogleProvider = new GoogleAuthProvider();
@@ -33,6 +35,7 @@ const signInWithGoogle = (location,navigate)=>{
         }).catch((error) => {    
         const errorCode = error.code;
         const errorMessage = error.message; 
+        setError(errorMessage)
         })
         .finally(() => setIsLoading(true));
 }
@@ -77,7 +80,8 @@ const registration = (email, password,navigate) =>{
   
   .catch((error) => {
     const errorCode = error.code;
-    const errorMessage = error.message;   
+    const errorMessage = error.message;
+    setError(errorMessage)   
   })
   .finally(() => setIsLoading(true));
 }
@@ -96,6 +100,7 @@ const login = (email, password,location,navigate) =>{
   .catch((error) => {
     const errorCode = error.code;
     const errorMessage = error.message;
+    setError(errorMessage)
   })
   .finally(() => setIsLoading(true));
 }
@@ -129,7 +134,8 @@ useEffect(()=>{
             registration,
             login,
             admin,
-            isLoading
+            isLoading,
+            error
         }
     );
 };

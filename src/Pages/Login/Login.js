@@ -5,7 +5,7 @@ import "./Login.css"
 import { Link, useLocation, useNavigate } from 'react-router-dom';
 import { Col, Container, Row } from 'react-bootstrap';
 const Login = () => {
-    const {signInWithGoogle,user,logOut,login}= UseFirebase();
+    const {signInWithGoogle,user,logOut,login,error}= UseFirebase();
     const [email,setEmail] = useState("")
     const [password,setPassword] = useState("")
     const location = useLocation();
@@ -25,6 +25,7 @@ const Login = () => {
     const handleGoogleLogin = () =>{        
         signInWithGoogle(location,navigate)
     };
+    console.log(error);
 
     
     return (

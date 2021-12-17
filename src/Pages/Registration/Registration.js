@@ -5,7 +5,7 @@ import UseFirebase from '../Hooks/UseFirebase/UseFirebase';
 import "./Registration.css"
 
 const Registration = () => {
-    const {registration}= UseFirebase(); 
+    const {registration,error}= UseFirebase(); 
     const [email,setEmail] = useState("");
     const [password,setPassword] = useState("");
     const navigation = useNavigate();
@@ -20,6 +20,7 @@ const handleReg = (e) => {
     registration(email, password,navigation);
     e.preventDefault();
 }
+console.log(error);
 
 
 
