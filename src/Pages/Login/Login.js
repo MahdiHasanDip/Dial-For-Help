@@ -35,7 +35,8 @@ const Login = () => {
                     <Row>
                         <Col xs={12} lg={6}>
                             <div className=""> 
-                            <h3>Login Here</h3>    
+                            <h3><span className='green'>
+                Login </span>Here</h3>    
                             <hr />                          
                                     <form className='Form' onClick={handleLogin}>
                                         <input onBlur={handleEmail} type="email"  placeholder='Email'  />

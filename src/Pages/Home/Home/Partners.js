@@ -5,7 +5,8 @@ import "./Home.css"
 const Partners = () => {
     return (
         <div className='partners'>
-            <h3>Our Partners</h3>
+            <h3>Our <span className='green'>
+                Partners </span></h3>
 
             <Container>
                 <Row>

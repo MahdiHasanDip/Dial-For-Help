@@ -34,7 +34,8 @@ const email = () => {
         <br />
         <div className="container">            
                 <div className="col-lg-12">
-                    <h2 className="text-center">Send Us Email</h2>
+                    <h2 className="text-center">Send <span className='green'>
+               Us Email</span></h2>
                     <hr />
                 <div className='email-from' >
                     <form onSubmit={sendEmail}>

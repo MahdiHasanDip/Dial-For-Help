@@ -57,7 +57,7 @@ const Services = () => {
         <div className='services'> 
 
                 <div className="services-header">
-                    <img className='img-fluid' src="https://i.ibb.co/WDHDFMS/Dial-For-help-1.png" alt="" />
+                    <img className='img-fluid' src="https://i.ibb.co/QmxxYDt/Dial-For-help-1.png" alt="" />
                     <br /> <br /> <br />              
                 </div>
 

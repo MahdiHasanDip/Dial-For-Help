@@ -31,7 +31,8 @@ console.log(error);
 <Row>
     <Col xs={12} lg={6}>
         <div className=""> 
-        <h3>Registration Here</h3>    
+        <h3>Registration <span className='green'>
+                Here </span></h3>    
         <hr />                          
         <form className='Form' onSubmit={handleReg}>
                 <input onBlur={handleEmail} type="email" placeholder='Your Email'/><br />

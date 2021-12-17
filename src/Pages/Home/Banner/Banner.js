@@ -10,7 +10,7 @@ const Banner = () => {
                   <img
                     className="d-block w-100 img-fluid"
                     
-                    src="https://i.ibb.co/9qTpmR7/1.png"
+                    src="https://i.ibb.co/09p9kgx/1.png"
                     alt="First slide"
                     />
                   {/* <Carousel.Caption>
@@ -22,7 +22,7 @@ const Banner = () => {
                 <Carousel.Item>
                   <img
                     className="d-block w-100 "
-                    src="https://i.ibb.co/F6X2kGG/2.png"
+                    src="https://i.ibb.co/2hj1mh4/2.png"
                     alt="Second slide"
                     />
 
@@ -35,7 +35,7 @@ const Banner = () => {
                 <Carousel.Item>
                   <img
                     className="d-block w-100 "
-                    src="https://i.ibb.co/h1dzF62/3.png"
+                    src="https://i.ibb.co/fDk9KCx/3.png"
                     alt="Third slide"
                   />
 

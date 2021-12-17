@@ -22,7 +22,8 @@ const Home = () => {
             
             <Container>
                 <div className="title">
-                <h1>Our Services</h1>
+                <h1>Our <span className='green'>
+                Services </span> </h1>
                 <img src="https://i.ibb.co/pLq611T/Minimalist-Vintage-Jeep-Offroad-Adventure-Car-Logo.png" alt="" />
                 </div>
               <Row>
@@ -57,15 +58,19 @@ const Home = () => {
           </Container>   
 
 
-        <div  className="">
+        <div  className="contact-home">
           <Container>
             <Row>
-          <h1>Contact Us</h1>
+              
+          <h1><span className='green'>
+                Contact </span> Us</h1>
+              <hr />
               <Col xs={12} lg={5}> 
               <div data-aos="zoom-out-right" className="dial">
               <h3>DIAL FOR HELP</h3>
               <hr />
-              <h4>Contact Information:</h4>
+              <h4>Contact <span className='green'>
+                Information </span></h4>
               <br /> 
               <ul>
                 <li>Address: Khalishpur, Khulna,9000</li>
@@ -73,7 +78,7 @@ const Home = () => {
                 <li>Email: hellp@dial.com</li>                
               </ul>
               </div></Col>
-              <Col data-aos="flip-right"xs={12} lg={7}><Email></Email></Col>
+              <Col className='email-home' data-aos="flip-right"xs={12} lg={7}><Email></Email></Col>
             </Row>
           </Container>
         
@@ -82,19 +87,14 @@ const Home = () => {
 
 
         <div className="mt-5 ">
-          <h1>Who we are</h1>
+          <h1>Who <span className='green'>
+                We Are </span></h1>
           <hr />
 
-          <Container>
-            <Row>
-              <Col data-aos="flip-left" xs={12} lg={6}><img className='img-fluid' src="https://i.ibb.co/yBRY9D8/Untitled-design-3.png" alt="" /></Col>
-              <Col xs={12} lg={6}>
-              <div data-aos="zoom-out-left" className="container  about-text">
-                    <p className=''>We are DIAL FOR HELP. We provide Electricians, Drivers, and Plumber in one call. We provide cost-effective, high-quality human resource services allowing you to focus more on your core business. We collect workers data. Then test their quality. Finally we send them to you. We offer you the best people in the market. </p>
-            </div>
-              </Col>
-            </Row>
-          </Container>
+
+          <div data-aos="flip-left" className="">
+            <img className='img-fluid' src="https://i.ibb.co/VtHkXMQ/dial-for-help-8-1.png" alt="" />
+          </div>
           
           
         </div>
