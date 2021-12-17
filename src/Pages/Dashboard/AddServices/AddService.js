@@ -15,7 +15,7 @@ const AddService = () => {
             /* Read more about isConfirmed, isDenied below */
             if (result.isConfirmed) {
               Swal.fire('Saved!', '', 'success')
-              fetch('http://localhost:5000/service',{
+              fetch('https://intense-crag-69313.herokuapp.com/service',{
             method:'POST',
             headers:{
                 'content-type': 'application/json'

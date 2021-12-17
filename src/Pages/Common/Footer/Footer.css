@@ -3,3 +3,8 @@
   background-color: rgb(7, 24, 15);
   color: rgb(199, 201, 202);
 }
+.Footer ul li {
+  list-style: none;
+  justify-items: left;
+  text-align: justify;
+}

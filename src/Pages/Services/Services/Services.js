@@ -19,7 +19,7 @@ const Services = () => {
       },[])
 
     useEffect(() => {
-        fetch('http://localhost:5000/service')
+        fetch('https://intense-crag-69313.herokuapp.com/service')
         .then(res => res.json())
         .then(data => setServices(data))
         
@@ -69,7 +69,7 @@ const Services = () => {
                     <Container>  
                          <Row>
                     {
-                        newElectricians.map(electrician => <Col lg={4}  >
+                        newElectricians.map(electrician => <Col data-aos="flip-left" lg={4}  >
                             <div className="card">
                                 <img className='mx-auto' src={electrician?.img} alt="" />
                                 <h4><b>{electrician?.name}</b> </h4>
@@ -95,7 +95,7 @@ const Services = () => {
                     <Container>  
                          <Row>
                     {
-                        newPlumbers.map(plumber => <Col lg={4}  >
+                        newPlumbers.map(plumber => <Col data-aos="flip-left" lg={4}  >
                             <div className="card">
                                 <img className='mx-auto' src={plumber?.img} alt="" />
                                 <h4><b>{plumber?.name}</b> </h4>
@@ -120,7 +120,7 @@ const Services = () => {
                     <Container>  
                          <Row>
                     {
-                        newDrivers.map(driver => <Col lg={4}  >
+                        newDrivers.map(driver => <Col data-aos="flip-left" lg={4}  >
                             <div className="card">
                                 <img className='mx-auto' src={driver?.img} alt="" />
                                 <h4><b>{driver?.name}</b> </h4>

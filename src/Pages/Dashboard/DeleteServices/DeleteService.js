@@ -5,7 +5,7 @@ const DeleteService = () => {
     const [services, setServices]=useState([]);
    
     useEffect(()=>{
-        fetch('http://localhost:5000/service')
+        fetch('https://intense-crag-69313.herokuapp.com/service')
         .then(res => res.json())
         .then(data => setServices(data))
     },[services.length])
@@ -21,7 +21,7 @@ const DeleteService = () => {
             confirmButtonText: 'Yes, delete it!'
           }).then((result) => {
             if (result.isConfirmed) {              
-              fetch(`http://localhost:5000/service/${id}`,{
+              fetch(`https://intense-crag-69313.herokuapp.com/service/${id}`,{
                 method:'DELETE'
             })
             .then(res => res.json())

@@ -5,7 +5,7 @@ const Electrician = () => {
     const [services, setServices]= useState([]);
     const [electricians, setElectricians]= useState([]);
     useEffect(() => {
-        fetch('http://localhost:5000/service')
+        fetch('https://intense-crag-69313.herokuapp.com/service')
         .then(res => res.json())
         .then(data => setServices(data))
         
