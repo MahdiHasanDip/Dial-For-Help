@@ -1,4 +1,6 @@
 import './App.css';
+
+import 'aos/dist/aos.css';
 import 'bootstrap/dist/css/bootstrap.min.css';
 import Header from './Pages/Common/Header/Header';
 import { BrowserRouter, Route, Routes } from 'react-router-dom';
@@ -19,7 +21,7 @@ import Electrician from './Pages/Services/Electrician/Electrician';
 import Plumber from './Pages/Services/Plumber/Plumber';
 import Services from './Pages/Services/Services/Services';
 import AuthProvider from './Pages/Context/AuthProvider';
-import PrivateRoute from './PrivetRoute/PrivetRoute';
+import PrivateRoute from '../src/Pages/PrivetRoute/PrivetRoute';
 import AdminRoute from './Pages/AdminRoute/AdminRoute';
 
 

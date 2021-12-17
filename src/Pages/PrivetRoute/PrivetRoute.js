@@ -1,7 +1,7 @@
 import React from 'react';
 import { Spinner } from 'react-bootstrap';
 import { Navigate, useLocation } from 'react-router-dom';
-import useAuth from '../Pages/Hooks/UseAuth/UseAuth';
+import useAuth from '../Hooks/UseAuth/UseAuth';
 
 const PrivateRoute = ({ children, ...rest }) => {
     const { user, isLoading } = useAuth();

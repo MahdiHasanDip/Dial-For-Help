@@ -5,12 +5,18 @@ import Driver from '../Driver/Driver';
 import Electrician from '../Electrician/Electrician';
 import Plumber from '../Plumber/Plumber';
 import "./Services.css"
+import 'aos/dist/aos.css';
+import AOS from 'aos';
 
 const Services = () => {
     const [services, setServices]= useState([]);
     const [drivers, setDrivers]= useState([]);
     const [plumbers, setPlumbers]= useState([]);
     const [electricians, setElectricians]= useState([]);
+
+    useEffect(()=>{
+        AOS.init({duration: 1000});
+      },[])
 
     useEffect(() => {
         fetch('http://localhost:5000/service')
@@ -57,7 +63,7 @@ const Services = () => {
 
                 <div className="container">
                     <div className="img mx-auto">
-                    <img className='img-fluid' src="https://i.ibb.co/Y019rT5/Driver-2.png" alt="" />
+                    <img data-aos="fade-right" className='img-fluid' src="https://i.ibb.co/Y019rT5/Driver-2.png" alt="" />
                     <br /><br /><br /><br /><br />
                     </div>
                     <Container>  
@@ -83,7 +89,7 @@ const Services = () => {
                 </div>
                 <div className="container">
                     <div className="img mx-auto">
-                    <img className='img-fluid' src="https://i.ibb.co/Kq6kwMX/d-1.png" alt="" />                    
+                    <img data-aos="fade-right" className='img-fluid' src="https://i.ibb.co/Kq6kwMX/d-1.png" alt="" />                    
                     <br /><br /><br /><br /><br />
                     </div>
                     <Container>  
@@ -108,7 +114,7 @@ const Services = () => {
                 </div>
                 <div className="container">
                     <div className="img mx-auto">
-                    <img className='img-fluid' src="https://i.ibb.co/DpFJHvn/Driverssssss.png" alt="" />                    
+                    <img data-aos="fade-right" className='img-fluid' src="https://i.ibb.co/DpFJHvn/Driverssssss.png" alt="" />                    
                     <br /><br /><br /><br /><br /> 
                     </div>
                     <Container>  

@@ -4,3 +4,7 @@
 .logo {
   display: flex;
 }
+.logout-btn {
+  background-color: aquamarine;
+  height: 35px;
+}

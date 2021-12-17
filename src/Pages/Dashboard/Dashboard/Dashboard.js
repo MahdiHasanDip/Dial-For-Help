@@ -1,10 +1,11 @@
 import React from 'react';
 import { Col,    Row } from 'react-bootstrap';
 import {  Link, Outlet } from 'react-router-dom';
+import UseFirebase from '../../Hooks/UseFirebase/UseFirebase';
 import "./Dashboard.css"
 
 const Dashboard = () => {
-    
+    const {user,logOut,admin} = UseFirebase();
     return (
         <div className=''>
             
@@ -39,8 +40,11 @@ const Dashboard = () => {
                             <br />                      
                             <br />                      
                             <br />                      
-                            <br />  
-                            <button>Login</button>                    
+                            <br />
+                            <p>{user.email
+                            }</p>  Admin
+                            <hr />
+                            <button className='btn btn-danger' onClick={logOut}>Logout</button> 
                         </ul>
                         </div>
                     </Col>

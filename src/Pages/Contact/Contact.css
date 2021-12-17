@@ -1,8 +1,7 @@
 .input-box {
   width: 100%;
 }
-.Contact-me {
-}
+
 textarea {
   -webkit-box-sizing: border-box;
   -moz-box-sizing: border-box;
@@ -30,5 +29,11 @@ textarea {
   border-radius: 25px;
 }
 #Contact {
-  margin-top: 60px;
+  margin-top: 10px;
+}
+
+.email-from {
+  padding-bottom: 45px;
+  background-color: rgb(240, 240, 240);
+  box-shadow: rgba(0, 0, 0, 0.15) 0px 5px 15px 0px;
 }
