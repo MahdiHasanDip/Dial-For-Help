@@ -30,7 +30,7 @@
 - AOS
 - SweetAllert2
 
-**Authentication ** 
+**Authentication:** 
 - Firebase
 
 **Back-end:** 
