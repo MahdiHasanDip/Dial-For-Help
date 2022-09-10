@@ -1,8 +1,7 @@
 .services {
   margin-top: 65px;
 }
-.services-header {
-}
+
 .services-title {
   color: antiquewhite;
   font-family: "Courier New", Courier, monospace;
@@ -22,4 +21,11 @@
   background-color: #1ed38b;
   border: 1px solid #2ee59d;
   color: aliceblue;
+}
+
+.services-container{
+  margin-top: 2%;
+border-radius: 2%;
+  padding: 7% 2% 0px 2%;
+  background-color: rgb(255, 255, 255);
 }

@@ -56,7 +56,7 @@ function App() {
             <Route path="/dashboard/Admin" element={<Admin />} />
             <Route path="/dashboard/addService" element={<AddService/>} />
             <Route path="/dashboard/delete" element={<DeleteService/>} />   
-      </Route>
+        </Route>
 
         
         <Route path="*" element={<NotFound/>}></Route>

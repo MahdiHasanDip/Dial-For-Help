@@ -7,7 +7,7 @@ import UseFirebase from '../../Hooks/UseFirebase/UseFirebase';
 const Header = () => {
     const {user,logOut,admin} = UseFirebase();
     return (
-        <div className="">
+        <div className="header">
             <Navbar fixed="top" collapseOnSelect expand="lg" bg="dark" variant="dark">
   <Container>
   <Navbar.Brand as={Link} to="/">

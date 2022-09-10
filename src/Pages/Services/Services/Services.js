@@ -61,7 +61,7 @@ const Services = () => {
                     <br /> <br /> <br />              
                 </div>
 
-                <div className="container">
+                <div className="container services-container">
                     <div className="img mx-auto">
                     <img data-aos="fade-right" className='img-fluid' src="https://i.ibb.co/Y019rT5/Driver-2.png" alt="" />
                     <br /><br /><br /><br /><br />
@@ -84,10 +84,10 @@ const Services = () => {
                     }
                         </Row>
                     </Container> 
-                             <Link to="/electrician"><button className='find-btn'>Mind More</button></Link>
+                             <Link to="/electrician"><button className='find-btn'>Find More</button></Link>
 
                 </div>
-                <div className="container">
+                <div className="container services-container">
                     <div className="img mx-auto">
                     <img data-aos="fade-right" className='img-fluid' src="https://i.ibb.co/Kq6kwMX/d-1.png" alt="" />                    
                     <br /><br /><br /><br /><br />
@@ -110,9 +110,9 @@ const Services = () => {
                     }
                         </Row>
                     </Container> 
-                    <Link to="/plumber"><button className='find-btn'>Mind More</button></Link>
+                    <Link to="/plumber"><button className='find-btn'>Find More</button></Link>
                 </div>
-                <div className="container">
+                <div className="container services-container">
                     <div className="img mx-auto">
                     <img data-aos="fade-right" className='img-fluid' src="https://i.ibb.co/DpFJHvn/Driverssssss.png" alt="" />                    
                     <br /><br /><br /><br /><br /> 
@@ -135,7 +135,7 @@ const Services = () => {
                     }
                         </Row>
                     </Container> 
-                    <Link to="/driver"><button className='find-btn'>Mind More</button></Link>
+                    <Link to="/driver"><button className='find-btn'>Find More</button></Link>
                 </div>                
         </div>
     );
