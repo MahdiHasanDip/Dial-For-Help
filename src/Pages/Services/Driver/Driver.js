@@ -25,7 +25,7 @@ const Driver = () => {
     return (
         <div className='driver'>
            <div className="driver-title">
-                <img className="img-fluid" src="https://i.ibb.co/cYyCMvJ/Dial-For-help-5.png" alt="" />
+                <img className="img-fluid" src="https://i.ibb.co/cYyCMvJ/Dial-For-help-5.png" alt="images" />
                 <h1>YOU CAN FIND DRIVERS HERE</h1>
                 <hr />
            </div>
@@ -36,7 +36,7 @@ const Driver = () => {
                         {
                             drivers.map(driver => <Col lg={4}  >
                                 <div className="card">
-                                    <img className='mx-auto' src={driver.img} alt="" />
+                                    <img className='mx-auto' src={driver.img} alt="images" />
                                     <h4><b>{driver.name}</b> </h4>
                                     <b>{driver.skill}</b>
                                     <ul>

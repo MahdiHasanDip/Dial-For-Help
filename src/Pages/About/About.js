@@ -3,11 +3,11 @@ import './About.css'
 const About = () => {
     return (
         <div>
-            <div className="about ">
-                <img className="img-fluid" src="https://i.ibb.co/Bt10kdc/dial-for-help-7.png" alt="" />
+            <div className="about">
+                <img className="img-fluid" src="https://i.ibb.co/Bt10kdc/dial-for-help-7.png" alt="images" />
             </div>
 
-            <div className=" container ">
+            <div className="container">
                 <h1><span className='green'>
                 About </span> US</h1>
                 <hr />

@@ -46,7 +46,9 @@ const DeleteService = () => {
 
     return (
         <div >
-            <h1>Delete service here {services?.length} </h1>
+            <h1>Delete service here  </h1>
+            <hr />
+            <p>Total Services: {services?.length}</p>
             <table className="table table-striped">
                 <thead>
                     <tr>
@@ -75,5 +77,5 @@ const DeleteService = () => {
     );
 };
 
-export default DeleteService;<h1>Delete service here</h1>
+export default DeleteService;
 

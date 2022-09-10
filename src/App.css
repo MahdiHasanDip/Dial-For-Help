@@ -7,7 +7,7 @@ box-sizing: border-box;
 .App {
   text-align: center;
   background-color: #eff2f3;
-  width: 100vw;
+  /* width: 100vw; */
   min-height: 100vh;
 }
 

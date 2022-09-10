@@ -21,7 +21,7 @@ const Electrician = () => {
         <div className='driver'>
            <div className="driver-title">
                <div >
-                   <img className="img-fluid" src="https://i.ibb.co/ssCYMZp/Dial-For-help-3.png" alt="" />
+                   <img className="img-fluid" src="https://i.ibb.co/ssCYMZp/Dial-For-help-3.png" alt="images" />
                </div>
            <h1 className="pt-3">YOU CAN FIND ELECTRICIANS HERE</h1>
            {/* <p>You can find drivers here</p> */}

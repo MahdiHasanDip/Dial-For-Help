@@ -1,5 +1,5 @@
 import React, { useEffect } from 'react';
-import {  Col, Container, Row } from 'react-bootstrap';
+import {  Col, Container, Row, Spinner } from 'react-bootstrap';
 import { Link } from 'react-router-dom';
 import Email from '../../Contact/Email';
 import Banner from '../Banner/Banner';
@@ -24,12 +24,12 @@ const Home = () => {
                 <div className="title">
                 <h1>Our <span className='green'>
                 Services </span> </h1>
-                <img src="https://i.ibb.co/pLq611T/Minimalist-Vintage-Jeep-Offroad-Adventure-Car-Logo.png" alt="" />
+                <img src="https://i.ibb.co/pLq611T/Minimalist-Vintage-Jeep-Offroad-Adventure-Car-Logo.png" alt="images" />
                 </div>
               <Row>
                 <Col xs={12} md={6} lg={4}>
                   <div data-aos="fade-right" id="one" className="first">
-                    <img className='img-fluid' src="https://i.ibb.co/Yf7rR5N/1.png" alt="" />
+                    <img className='img-fluid' src="https://i.ibb.co/Yf7rR5N/1.png" alt="images" />
                     <h1>Electrician</h1>
                     <Link to="/electrician">                    
                     <button className='Service-btn'>Use Service</button>
@@ -38,7 +38,7 @@ const Home = () => {
                 </Col>
                 <Col xs={12} md={6} lg={4}>
                   <div data-aos="zoom-in-up" id="two" className="first">
-                    <img src="https://i.ibb.co/mJqJjJS/2.png" alt="" />
+                    <img src="https://i.ibb.co/mJqJjJS/2.png" alt="images" />
                   <h1>Plumber</h1>
                   <Link to="/plumber">                    
                     <button className='Service-btn'>Use Service</button>
@@ -47,7 +47,7 @@ const Home = () => {
                 </Col>
                 <Col xs={12} md={6} lg={4}>
                   <div data-aos="fade-left" id="three" className="first">
-                    <img src="https://i.ibb.co/x5Yj9FQ/3.png" alt="" />
+                    <img src="https://i.ibb.co/x5Yj9FQ/3.png" alt="images" />
                     <h1>Driver</h1>
                     <Link to="/driver">                    
                     <button className='Service-btn'>Use Service</button>
@@ -93,7 +93,7 @@ const Home = () => {
 
 
           <div data-aos="flip-left" className="">
-            <img className='img-fluid' src="https://i.ibb.co/VtHkXMQ/dial-for-help-8-1.png" alt="" />
+            <img className='img-fluid' src="https://i.ibb.co/VtHkXMQ/dial-for-help-8-1.png" alt="images" />
           </div>
           
           
@@ -104,7 +104,7 @@ const Home = () => {
             <Partners></Partners>
           </div>
 
-
+         
 
         </div>
     );

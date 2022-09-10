@@ -7,7 +7,7 @@ import "./Dashboard.css"
 const Dashboard = () => {
     const {user,logOut,admin} = UseFirebase();
     return (
-        <div className=''>
+        <div className='dashboard-home'>
             
                 <Row>
                     <Col className='aside-col'  xs={12} lg={3}>
